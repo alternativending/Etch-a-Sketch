@@ -13,7 +13,7 @@
 
 .square {
     border: 1px solid black;
-    background-color: white;
+    background-color: rgb(32, 33, 35);
     box-sizing: border-box;
     border-radius: 15%;
 

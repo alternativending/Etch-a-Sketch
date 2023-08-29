@@ -73,14 +73,20 @@ btn1.addEventListener('click', () => {
 
         squares.forEach((square) => {
         square.addEventListener('mouseleave', () => {
-        square.style.backgroundColor = 'blue';
+        const colorArray = [];
+        for (let i = 0; i < 3; i++) {
+            let randomFloat = Math.random();
+            let result = Math.floor(randomFloat * 256); // Generate a random color value between 0 and 255
+            colorArray.push(result);
+        }
+        square.style.backgroundColor = `rgb(${colorArray[0]}, ${colorArray[1]}, ${colorArray[2]})`;
     });
 });
         const reset = document.querySelector('.btn2');
 
         reset.addEventListener('click', () => {
         squares.forEach((square) => {
-        square.style.backgroundColor = 'white';
+        square.style.backgroundColor = 'rgb(32, 33, 35)';
         square.style.border = '1px solid black';
     });
 });
@@ -98,7 +104,7 @@ const reset = document.querySelector('.btn2');
 
 reset.addEventListener('click', () => {
     squares.forEach((square) => {
-        square.style.backgroundColor = 'white';
+        square.style.backgroundColor = 'rgb(32, 33, 35)';
         square.style.border = '1px solid black';
     });
 });
