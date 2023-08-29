@@ -70,7 +70,6 @@ btn1.addEventListener('click', () => {
         square.style.backgroundColor = 'blueviolet';
     });
 });
-
         squares.forEach((square) => {
         square.addEventListener('mouseleave', () => {
         const colorArray = [];
@@ -82,6 +81,7 @@ btn1.addEventListener('click', () => {
         square.style.backgroundColor = `rgb(${colorArray[0]}, ${colorArray[1]}, ${colorArray[2]})`;
     });
 });
+
         const reset = document.querySelector('.btn2');
 
         reset.addEventListener('click', () => {
@@ -90,6 +90,17 @@ btn1.addEventListener('click', () => {
         square.style.border = '1px solid black';
     });
 });
+        squares.forEach((square) => {
+        square.addEventListener('touchmove', () => {
+            const colorArray = [];
+            for (let i = 0; i < 3; i++) {
+                let randomFloat = Math.random();
+                let result = Math.floor(randomFloat * 256); // Generate a random color value between 0 and 255
+                colorArray.push(result);
+            }
+            square.style.backgroundColor = `rgb(${colorArray[0]}, ${colorArray[1]}, ${colorArray[2]})`;
+        });
+    });
 
     }
     else if (newSize < 0) {
