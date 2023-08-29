@@ -1,0 +1,12 @@
+#container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+    margin: auto; /* Center the grid horizontally */
+}
+
+.square {
+    border: 1px solid black;
+    background-color: white;
+    box-sizing: border-box;
+}
