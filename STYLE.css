@@ -69,13 +69,13 @@ body {
     }
 
     .move-up {
-        margin-top: -30px; /* Adjust this value as needed */
+        margin-top: -20px; /* Adjust this value as needed */
     }
     
     /* Apply the negative margin-top to specific elements */
     .btn1.move-up,
     .btn2.move-up
     #container.move-up {
-        margin-top: -30px; /* Adjust this value as needed */
+        margin-top: -10px; /* Adjust this value as needed */
     }
 }
