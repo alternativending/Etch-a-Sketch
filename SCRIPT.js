@@ -49,19 +49,34 @@ squares.forEach((square) => {
         square.style.backgroundColor = `rgb(${colorArray[0]}, ${colorArray[1]}, ${colorArray[2]})`;
     });
 });
+//smartphone change below
+let isTouching = false;
 
-squares.forEach((square) => {
-    square.addEventListener('touchmove', () => {
-        const colorArray = [];
-        for (let i = 0; i < 3; i++) {
-            let randomFloat = Math.random();
-            let result = Math.floor(randomFloat * 256); // Generate a random color value between 0 and 255
-            colorArray.push(result);
-        }
-        square.style.backgroundColor = `rgb(${colorArray[0]}, ${colorArray[1]}, ${colorArray[2]})`;
-    });
+container.addEventListener('touchstart', () => {
+    isTouching = true;
 });
 
+container.addEventListener('touchend', () => {
+    isTouching = false;
+});
+
+container.addEventListener('touchmove', (event) => {
+    if (isTouching) {
+        const touch = event.touches[0];
+        const target = document.elementFromPoint(touch.clientX, touch.clientY);
+
+        if (target && target.classList.contains('square')) {
+            const colorArray = [];
+            for (let i = 0; i < 3; i++) {
+            let randomFloat = Math.random();
+            let result = Math.floor(randomFloat * 256);
+         colorArray.push(result);
+        }
+        target.style.backgroundColor = `rgb(${colorArray[0]}, ${colorArray[1]}, ${colorArray[2]})`;
+    }
+}
+});
+//
 const btn1 = document.querySelector('.btn1');
 
 btn1.addEventListener('mouseover', () => {
@@ -102,18 +117,34 @@ btn1.addEventListener('click', () => {
         square.style.border = '1px solid black';
     });
 });
-        squares.forEach((square) => {
-        square.addEventListener('touchmove', () => {
-            const colorArray = [];
-            for (let i = 0; i < 3; i++) {
-                let randomFloat = Math.random();
-                let result = Math.floor(randomFloat * 256); // Generate a random color value between 0 and 255
-                colorArray.push(result);
-            }
-            square.style.backgroundColor = `rgb(${colorArray[0]}, ${colorArray[1]}, ${colorArray[2]})`;
-        });
-    });
+// smartphone change below
+        let isTouching = false;
 
+        container.addEventListener('touchstart', () => {
+            isTouching = true;
+        });
+
+        container.addEventListener('touchend', () => {
+            isTouching = false;
+        });
+
+        container.addEventListener('touchmove', (event) => {
+            if (isTouching) {
+                const touch = event.touches[0];
+                const target = document.elementFromPoint(touch.clientX, touch.clientY);
+        
+                if (target && target.classList.contains('square')) {
+                    const colorArray = [];
+                    for (let i = 0; i < 3; i++) {
+                    let randomFloat = Math.random();
+                    let result = Math.floor(randomFloat * 256);
+                 colorArray.push(result);
+                }
+                target.style.backgroundColor = `rgb(${colorArray[0]}, ${colorArray[1]}, ${colorArray[2]})`;
+            }
+        }
+});
+//
     }
     else if (newSize < 0) {
         alert("Please enter positive numbers only")

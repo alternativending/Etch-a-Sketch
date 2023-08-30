@@ -1,7 +1,7 @@
 #container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 20px);
-    grid-template-rows: repeat(auto-fill, 20px);
+    grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(20px, 1fr));
     margin: auto; /* Center the grid horizontally */
     max-width: 500px; /* Set the maximum width */
     max-height: 500px; /* Set the maximum height */
