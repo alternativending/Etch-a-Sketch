@@ -59,13 +59,12 @@ body {
         /* Adjust button properties for smartphones */
         font-size:small; /* Example adjustment */
         padding: 10px; /* Example adjustment */
-        margin: 5%;
         /* ... other adjustments ... */
     }
 
     #container {
         max-width: 90%; /* Set a max width in percentage */
-        max-height: 90%;
+        max-height: 70vh;
         margin: 0 auto; /* Center the container */
     }
 
