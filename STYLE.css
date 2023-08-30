@@ -64,18 +64,13 @@ body {
 
     #container {
         max-width: 90%; /* Set a max width in percentage */
-        max-height: 70vh;
+        max-height: 50vh;
         margin: 0 auto; /* Center the container */
     }
 
-    .move-up {
-        margin-top: -20px; /* Adjust this value as needed */
-    }
-    
-    /* Apply the negative margin-top to specific elements */
-    .btn1.move-up,
-    .btn2.move-up
-    #container.move-up {
+    .btn1,
+    .btn2,
+    #container {
         margin-top: -10px; /* Adjust this value as needed */
     }
 }
