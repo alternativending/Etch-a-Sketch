@@ -74,7 +74,8 @@ body {
     
     /* Apply the negative margin-top to specific elements */
     .btn1.move-up,
-    .btn2.move-up {
+    .btn2.move-up
+    #container.move-up {
         margin-top: -10px; /* Adjust this value as needed */
     }
 }
