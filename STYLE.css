@@ -62,4 +62,19 @@ body {
         margin: 5%;
         /* ... other adjustments ... */
     }
+
+    #container {
+        max-width: 90%; /* Set a max width in percentage */
+        margin: 0 auto; /* Center the container */
+    }
+
+    .move-up {
+        margin-top: -10px; /* Adjust this value as needed */
+    }
+    
+    /* Apply the negative margin-top to specific elements */
+    .btn1.move-up,
+    .btn2.move-up {
+        margin-top: -10px; /* Adjust this value as needed */
+    }
 }
