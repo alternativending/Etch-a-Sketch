@@ -52,3 +52,14 @@ body {
     font-family:'Times New Roman', Times, serif;
     box-shadow: 0 0px 5px blueviolet;
 }
+
+@media (max-width: 768px) {
+    .btn2,
+    .btn1 {
+        /* Adjust button properties for smartphones */
+        font-size:small; /* Example adjustment */
+        padding: 10px; /* Example adjustment */
+        margin: 5%;
+        /* ... other adjustments ... */
+    }
+}
