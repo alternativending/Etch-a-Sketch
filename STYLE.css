@@ -65,12 +65,13 @@ body {
     #container {
         max-width: 90%; /* Set a max width in percentage */
         max-height: 50vh;
-        margin: 0 auto; /* Center the container */
+        margin-top: -15px; /* Center the container */
     }
 
-    .btn1,
-    .btn2,
-    #container {
-        margin-top: -10px; /* Adjust this value as needed */
+    .btn1 {
+        margin-top: -20px; /* Adjust this value as needed */
+    }
+    .btn2 {
+        margin-top: -10px;
     }
 }
